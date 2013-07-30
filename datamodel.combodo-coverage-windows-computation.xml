@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <classes>
+    <class id="lnkCustomerContractToService" _delta="must_exist">
+      <fields>
+        <field id="coveragewindow_id" xsi:type="AttributeExternalKey" _delta="define">
+          <sql>coveragewindow_id</sql>
+          <target_class>CoverageWindow</target_class>
+          <is_null_allowed>true</is_null_allowed>
+          <on_target_delete>DEL_AUTO</on_target_delete>
+        </field>
+        <field id="coveragewindow_name" xsi:type="AttributeExternalField" _delta="define">
+          <extkey_attcode>coveragewindow_id</extkey_attcode>
+          <target_attcode>name</target_attcode>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+      <methods/>
+      <presentation _delta="redefine">
+        <details>
+          <items>
+            <item id="customercontract_id">
+              <rank>10</rank>
+            </item>
+            <item id="service_id">
+              <rank>20</rank>
+            </item>
+            <item id="sla_id">
+              <rank>30</rank>
+            <item id="coveragewindow_id">
+              <rank>40</rank>
+            </item>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="customercontract_id">
+              <rank>10</rank>
+            </item>
+            <item id="service_id">
+              <rank>20</rank>
+            </item>
+            <item id="coveragewindow_id">
+              <rank>40</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="customercontract_id">
+              <rank>10</rank>
+            </item>
+            <item id="service_id">
+              <rank>20</rank>
+            </item>
+            <item id="sla_id">
+              <rank>30</rank>
+            </item>
+            <item id="coveragewindow_id">
+              <rank>40</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+    </class>
+    <class id="UserRequest">
+       <fields>
+        <field id="tto" xsi:type="AttributeStopWatch" _delta="redefine">
+          <states>
+            <state id="new"/>
+            <state id="escalated_tto"/>
+          </states>
+          <working_time>ComputeWorkingHours</working_time>
+          <goal>ResponseTicketTTO</goal>
+          <thresholds>
+            <threshold>
+              <percent>75</percent>
+              <actions>
+		</actions>
+            </threshold>
+            <threshold>
+              <percent>100</percent>
+              <actions>
+              </actions>
+            </threshold>
+          </thresholds>
+        </field>
+        <field id="ttr" xsi:type="AttributeStopWatch" _delta="redefine">
+          <states>
+            <state id="escalated_tto"/>
+            <state id="assigned"/>
+            <state id="approved"/>
+            <state id="escalated_ttr"/>
+          </states>
+          <working_time>ComputeWorkingHours</working_time>
+          <goal>ResponseTicketTTR</goal>
+          <thresholds>
+            <threshold>
+              <percent>75</percent>
+              <actions>
+		</actions>
+            </threshold>
+            <threshold>
+              <percent>100</percent>
+              <actions>
+              </actions>
+            </threshold>
+          </thresholds>
+        </field>
+      </fields>
+   </class>
+  </classes>
+</itop_design>
