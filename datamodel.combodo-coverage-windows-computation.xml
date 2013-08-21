@@ -64,51 +64,5 @@
         </list>
       </presentation>
     </class>
-    <class id="UserRequest">
-       <fields>
-        <field id="tto" xsi:type="AttributeStopWatch" _delta="redefine">
-          <states>
-            <state id="new"/>
-            <state id="escalated_tto"/>
-          </states>
-          <working_time>ComputeWorkingHours</working_time>
-          <goal>ResponseTicketTTO</goal>
-          <thresholds>
-            <threshold>
-              <percent>75</percent>
-              <actions>
-		</actions>
-            </threshold>
-            <threshold>
-              <percent>100</percent>
-              <actions>
-              </actions>
-            </threshold>
-          </thresholds>
-        </field>
-        <field id="ttr" xsi:type="AttributeStopWatch" _delta="redefine">
-          <states>
-            <state id="escalated_tto"/>
-            <state id="assigned"/>
-            <state id="approved"/>
-            <state id="escalated_ttr"/>
-          </states>
-          <working_time>ComputeWorkingHours</working_time>
-          <goal>ResponseTicketTTR</goal>
-          <thresholds>
-            <threshold>
-              <percent>75</percent>
-              <actions>
-		</actions>
-            </threshold>
-            <threshold>
-              <percent>100</percent>
-              <actions>
-              </actions>
-            </threshold>
-          </thresholds>
-        </field>
-      </fields>
-   </class>
   </classes>
 </itop_design>
