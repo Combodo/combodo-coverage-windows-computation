@@ -18,6 +18,7 @@ SetupWebPage::AddModule(
 		),
 		'mandatory' => false,
 		'visible' => true,
+		'installer' => 'CoverageWindowComputationInstaller',
 
 		// Components
 		//
