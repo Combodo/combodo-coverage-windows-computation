@@ -3,7 +3,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__,
-	'combodo-coverage-windows-computation/2.0.0',
+	'combodo-coverage-windows-computation/2.0.1',
 	array(
 		// Identification
 		//
@@ -49,7 +49,12 @@ class CoverageWindowComputationInstaller extends ModuleInstallerAPI
 {
 	public static function BeforeWritingConfig(Config $oConfiguration)
 	{
-		$oConfiguration->SetModuleSetting('combodo-sla-computation', 'coverage_oql', 'SELECT CoverageWindow AS cw JOIN lnkCustomerContractToService AS l1 ON l1.coveragewindow_id = cw.id JOIN CustomerContract AS cc ON l1.customercontract_id = cc.id WHERE cc.org_id= :this->org_id AND l1.service_id = :this->service_id');
+		$sValue = $oConfiguration->GetModuleSetting('combodo-sla-computation', 'coverage_oql', 'SELECT CoverageWindow', null);
+		if (($sValue === null) || ($sValue == 'SELECT CoverageWindow'))
+		{
+			// Set the value if it equals the default value, or if it is not already present
+			$oConfiguration->SetModuleSetting('combodo-sla-computation', 'coverage_oql', 'SELECT CoverageWindow AS cw JOIN lnkCustomerContractToService AS l1 ON l1.coveragewindow_id = cw.id JOIN CustomerContract AS cc ON l1.customercontract_id = cc.id WHERE cc.org_id= :this->org_id AND l1.service_id = :this->service_id');
+		}
 		return $oConfiguration;
 	}
 }
