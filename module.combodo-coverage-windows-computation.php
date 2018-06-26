@@ -3,7 +3,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__,
-	'combodo-coverage-windows-computation/2.0.2',
+	'combodo-coverage-windows-computation/2.0.3',
 	array(
 		// Identification
 		//
@@ -25,14 +25,14 @@ SetupWebPage::AddModule(
 		'datamodel' => array(
 		),
 		'webservice' => array(
-			
+
 		),
 		'data.struct' => array(
 
 		),
 		'data.sample' => array(
 		),
-		
+
 		// Documentation
 		//
 		'doc.manual_setup' => '',
