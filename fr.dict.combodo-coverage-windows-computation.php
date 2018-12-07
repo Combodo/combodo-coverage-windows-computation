@@ -3,7 +3,6 @@
 //
 // Class: lnkCustomerContractToService
 //
-
 Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_id' => 'Heures ouvrées',
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_id+' => '',
@@ -11,4 +10,4 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_name+' => '',
 ));
 
-?>
+
