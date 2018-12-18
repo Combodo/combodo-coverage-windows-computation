@@ -3,7 +3,6 @@
 //
 // Class: lnkCustomerContractToService
 //
-
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_id' => 'Coverage Window',
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_id+' => '',
