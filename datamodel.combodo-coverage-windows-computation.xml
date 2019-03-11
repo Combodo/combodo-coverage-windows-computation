@@ -17,48 +17,24 @@
         </field>
       </fields>
       <methods/>
-      <presentation _delta="redefine">
+      <presentation>
         <details>
           <items>
-            <item id="customercontract_id">
-              <rank>10</rank>
-            </item>
-            <item id="service_id">
-              <rank>20</rank>
-            </item>
-            <item id="sla_id">
-              <rank>30</rank>
-            <item id="coveragewindow_id">
+            <item id="coveragewindow_id" _delta="define">
               <rank>40</rank>
-            </item>
             </item>
           </items>
         </details>
         <search>
           <items>
-            <item id="customercontract_id">
-              <rank>10</rank>
-            </item>
-            <item id="service_id">
-              <rank>20</rank>
-            </item>
-            <item id="coveragewindow_id">
+            <item id="coveragewindow_id" _delta="define">
               <rank>40</rank>
             </item>
           </items>
         </search>
         <list>
           <items>
-            <item id="customercontract_id">
-              <rank>10</rank>
-            </item>
-            <item id="service_id">
-              <rank>20</rank>
-            </item>
-            <item id="sla_id">
-              <rank>30</rank>
-            </item>
-            <item id="coveragewindow_id">
+            <item id="coveragewindow_id" _delta="define">
               <rank>40</rank>
             </item>
           </items>
