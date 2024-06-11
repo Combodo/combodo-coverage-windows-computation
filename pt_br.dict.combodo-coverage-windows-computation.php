@@ -1,13 +1,17 @@
 <?php
-
-//
-// Class: lnkCustomerContractToService
-//
-Dict::Add('PT BR', 'Brazilian', 'Brazilian', array(
+/**
+ * Localized data
+ *
+ * @copyright Copyright (C) 2010-2024 Combodo SAS
+ * @license    https://opensource.org/licenses/AGPL-3.0
+ * 
+ */
+/**
+ *
+ */
+Dict::Add('PT BR', 'Brazilian', 'Brazilian', [
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_id' => 'Janela de cobertura',
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_id+' => '',
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_name' => 'Nome janela de cobertura',
 	'Class:lnkCustomerContractToService/Attribute:coveragewindow_name+' => '',
-));
-
-
+]);
