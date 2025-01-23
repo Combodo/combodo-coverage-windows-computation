@@ -3,7 +3,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__,
-	'combodo-coverage-windows-computation/2.1.2',
+	'combodo-coverage-windows-computation/2.1.3',
 	array(
 		// Identification
 		//
